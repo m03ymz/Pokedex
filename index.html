@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="chart.js"></script>
+    <script src="html.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <link rel="icon" type="image/x-icon" href="img/pokeball.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<body id="body" onload="init()" id="body">
+    
+    <img id="pokemon-logo" src="img/pokemon-logo.png" alt="">
+    <h1 id="headline">Pokédex</h1>
+    
+    <div class="search-box" id="search-box">
+        <form onsubmit="event.preventDefault(); searchPokemon();" id="form">
+            <input type="text" id="searchInput" required minlength="3" placeholder="search Pokémon ...">
+            <button id="searchButton">Search</button>
+        </form>
+        </div>
+    </div>
+    
+    <div id="pokedex"></div>
+
+    <div id="pokemon-info"></div>
+
+    <button onclick="loadMorePokemon()" class="load-button" id="load-button"><b>load more</b></button>
+
     
 </body>
 </html>
